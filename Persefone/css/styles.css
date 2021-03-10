@@ -1,0 +1,150 @@
+/*Colores*/
+:root{
+  --verde: #648C27;
+  --amarillo: #D4D955;
+  --claro: #f0f2a0;
+  --cafe : #A6882D;
+  --oscuro: #0D0D0D;
+
+}
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--claro);
+    font-size: 2rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width: 70%;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+h3{
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+/*boton*/
+.boton{
+    background-color: var(--cafe);
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--claro);
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: none;
+    width: 30rem;
+    text-align: center;
+}
+
+
+
+/*Header*/
+header{
+    background-color: var(--amarillo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 30rem;
+}
+
+.heading{
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+.heading a{
+    margin-right: 2rem;
+    text-decoration: none;
+    color: var(--oscuro);
+}
+.heading a:hover{
+    font-size: 2.8rem;
+    color: var(--verde);
+}
+
+.contenido-principal{
+    margin: 5rem 0;
+}
+.contenido-principal:first-child{
+    margin-top: 0;
+}
+
+.contenido-principal-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.contenido-principal-info p{
+    margin-bottom: 5rem;
+}
+
+.imagen-contenido{
+    filter: brightness(30%);
+    min-height: 40rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.primera{
+    background-image:url(../img/suculenta.jpg);
+}
+.segunda{
+    background-image: url(../img/vivero\ 1.jpg);
+}
+.tercera{
+    background-image: url(../img/vivero\ 2.jpg);
+}
+.cuarta{
+    background-image: url(../img/Plantas\ 1.jpg);
+    filter: brightness(100%);
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--oscuro);
+
+}
+footer a{
+    color: var(--claro);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+footer a:hover{
+    font-size: 2.8rem;
+    color: var(--amarillo);
+}
