@@ -1,0 +1,37 @@
+.contacto-bg {
+    background-image: url(../img/imagenes-sitio/5.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+}
+
+.formulario {
+    background-color: $Claro;
+    margin: -10rem auto 5rem auto;
+    width: 70%;
+    padding: 3rem;
+
+    .campo {
+        display: flex;
+        margin-bottom: 2rem;
+
+        .campo__label {
+            flex: 0 0 9rem;
+            text-align: right;
+            padding-right: 2rem;
+            font-size: 1.6rem;
+        }
+        .campo__field {
+            flex: 1;
+            border: 1px solid var(--gris);
+            font-size: 1.6rem;
+        }
+        .campo__field--textarea {
+            height: 15rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
