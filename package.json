@@ -1,0 +1,34 @@
+{
+  "name": "persefone",
+  "version": "1.0.0",
+  "description": "Proyecto de Ingeniería de Software de Los Taqueros",
+  "main": "index.js",
+  "scripts": {
+    "test": "alert('test');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/MauroBaJ/Persefone"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JAVASCRIPT",
+    "GULP",
+    "SASS",
+    "MYSQL",
+    "NODE.JS"
+  ],
+  "author": "Los taqueros",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "postcss": "^8.2.8"
+  }
+}
