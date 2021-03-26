@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    align-items: center;
+    background-color: $AmarilloFuerte;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    @include tablet {
+        
+        img {
+            width: 30%;
+            height: auto;
+        }
+        flex-direction: row;
+    }
+
+
+    
+
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.2rem;
+    @include desktop{
+        flex-direction: row;
+    }
+
+    .link {
+        font-size: 1.6rem;
+        margin-right: 1rem;
+        color:$Verde;
+        margin-top: 1rem;
+        text-align: center;
+
+        &:hover{
+            font-size: 1.8rem;
+            color: $Oscuro
+        }
+    }
+}

@@ -6,8 +6,6 @@ const {
     parallel
 } = require('gulp');
 const sass = require('gulp-dart-sass');
-const imagemin = require('gulp-imagemin');
-const notify = require('gulp-notify');
 const concat = require('gulp-concat');
 const paths = {
     imagenes: 'src/img/**/*',
