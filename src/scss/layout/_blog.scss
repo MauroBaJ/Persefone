@@ -1,0 +1,60 @@
+.nuestro-blog {
+    margin-top: 3rem;
+
+
+    h2 {
+        margin: 2rem auto 1rem auto;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+
+.entradas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        @include grid(2, 2rem)
+    }
+
+    @include desktop {
+        @include grid(3, 5rem);
+    }
+
+}
+
+.entrada {
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $Oscuro;
+    box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.09);
+    padding: 1rem;
+
+    img {
+        width: 40rem;
+        height: 40rem;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    h3{
+        font-size: 2rem;
+        font-weight: $regular;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: $thin;
+    }
+    .blog-button{
+        font-size: 1.6rem;
+    }
+
+}
