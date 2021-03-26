@@ -1,0 +1,20 @@
+.galeria{
+    .galeria-imagenes{
+
+        margin: 2rem 0;
+        list-style: none;
+
+        @include grid(2, 2rem);
+        @include tablet{
+            @include grid(4, 3rem);
+        }
+        @include desktop{
+            @include grid(6, 4rem);
+        }
+        
+        li{
+            border: 1px solid $Oscuro;
+            box-shadow: 0 1rem rgba(0,0,0, 0.1);
+        }
+    }
+}
