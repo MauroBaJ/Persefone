@@ -11,6 +11,7 @@
     img{
         width: 100%;
         height: auto;
+        margin-bottom: 1rem;
     }
 
     @include tablet {
@@ -27,12 +28,14 @@
 
 }
 nav{
-    display: flex;
-    flex-direction: column;
+    display: none;
     text-align: center;
-    margin-top: 1.2rem;
-    @include desktop{
+    
+    margin-bottom: 0;
+    @include tablet{
+        display: flex;
         flex-direction: row;
+        margin-top: 1.2rem;
     }
 
     .link {
@@ -47,4 +50,16 @@ nav{
             color: $Oscuro
         }
     }
+}
+
+.hamburguer{
+    width: 5rem!important;
+    height: 5rem!important;
+    @include tablet{visibility: hidden;}
+}
+
+.mostrar{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }

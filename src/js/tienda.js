@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    cargarTienda();
-});
-
 function cargarTienda() {
     const galeria = document.querySelector('.galeria-imagenes');
     for (let i = 1; i <= 3; i++) {

@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('cargado');
-    cargarEntradas();
-});
-
 function cargarEntradas() {
     const entradas = document.querySelector('.entradas');
     for (let i = 1; i <= 8; i++) {
