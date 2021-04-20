@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Hola. Gracias por contribuir a Persefone: Plant Care and Lifestyle. Para cualquier asunto de este proyecto no dudes en contactar al administrador'
+        pr-message: 'Gracias por realizar tu primer pull. Esperamos seguir contando con tu ayuda en el desarrollo de este proyecto.'
