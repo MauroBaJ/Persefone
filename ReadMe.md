@@ -1,5 +1,5 @@
 # Persefone: Plant Care and LifeStyle
-![Logo Principal] (https://github.com/MauroBaJ/Persefone/blob/produccion/src/img/logo/long.png)
+![Logo Principal](https://github.com/MauroBaJ/Persefone/blob/produccion/src/img/logo/long.png)
 
 Este proyecto tiene la finalidad de funcionar como entregable para las materias de Ingeniería de Software, Programación Web y Administración de Bases de Datos para el equipo conformado por:
 * Basurto Jacobo, Mauricio
