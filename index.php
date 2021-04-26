@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./build/css/app.css">
-    <title>Persefone</title>
-</head>
+require('base/header.php');
 
-<body>
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="./build/img/logo/long.png" alt="logo">
-            </a>
-        </div>
-        <img src="build/img/logo/barras.svg" alt="hamburguer" class="hamburguer">
-        <nav class="navegacion-principal">
-            <a class='link' href="index.html">Inicio</a>
-            <a class='link' href="tienda.html">Tienda</a>
-            <a class='link' href="blog.html">Blog</a>
-            <a class='link' href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+?>
 
     <main>
         <div class="imagen-main contenedor">
@@ -77,20 +54,8 @@
 
     <script src="./build/js/bundle.min.js"></script>
 </body>
-<footer class="footer">
-    <div class="contenedor-footer">
-        <img src="./build/img/logo/short.png" alt="logo">
-        <nav class="navegacion-footer">
-            <a class='link' href="index.html">Inicio</a>
-            <a class='link' href="tienda.html">Tienda</a>
-            <a class='link' href="blog.html">Blog</a>
-            <a class='link' href="contacto.html">Contacto</a>
-        </nav>
-    </div>
-    <p>Persefone inc. Todos los derechos reservados, 2021</p>
-</footer>
 
+<?php
 
-
-
-</html>
+require('base/footer.php');
+?>
