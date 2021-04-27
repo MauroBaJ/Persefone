@@ -13,8 +13,7 @@
     <main class="entradas contenedor">
     </main>
 
-    <script src="./build/js/bundle.min.js"></script>
-</body>
+
 
 
 <?php

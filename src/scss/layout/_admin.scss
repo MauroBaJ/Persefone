@@ -1,0 +1,75 @@
+.contenedor-admin {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem auto;
+}
+
+.formulario-admin{
+    margin: 2rem auto;
+}
+
+.fieldset-admin {
+
+    background-color: $AmarilloBajito;
+    padding: 1rem;
+    legend {
+        font-size: 1.6rem;
+    }
+    .container{
+        display: flex;
+
+        margin-bottom: 1rem;
+
+
+    
+        label {
+            font-size: 1.6rem;
+            flex: 1;
+        }
+    
+        input {
+            font-size: 1.6rem;
+            flex: auto;
+        }
+        select{
+            flex: auto;
+            font-size: 1.6rem;
+        }
+        textarea{
+            flex: auto;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.button-send{
+    margin: 1rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    background-color: $AmarilloFuerte;
+    color: $Oscuro;
+
+    &:hover{
+        cursor: pointer;
+        transition: 0.3s ease-in;
+        background-color: $Verde;
+        color: $Claro;
+        font-size: 1.8rem;
+    }
+}
+
+.resultado-admin{
+    background-color: $Verde;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}

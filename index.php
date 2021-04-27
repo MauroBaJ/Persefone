@@ -14,7 +14,7 @@ require('base/header.php');
                 del estado de Jalisco. Visita nuestro Blog y compra tus herramientas
                 en nuestra tienda.
             </p>
-            <a href="blog.html" class="button">Inicia tu experiencia</a>
+            <a href="blog.php" class="button">Inicia tu experiencia</a>
         </div>
     </main>
 
@@ -27,7 +27,7 @@ require('base/header.php');
             veritatis tempore natus quos cum a, officia eveniet iusto quod voluptas
             nesciunt necessitatibus omnis, perferendis nemo earum error! Quibusdam,
             similique.</p>
-        <a href="blog.html" class="button">Visita nuestro blog</a>
+        <a href="blog.php" class="button">Visita nuestro blog</a>
 
     </div>
     <div class="contenedor imagen-main">
@@ -39,7 +39,7 @@ require('base/header.php');
             officiis libero praesentium explicabo eum expedita cupiditate, minus
             quam totam amet iste nobis tempora temporibus illo debitis quisquam magni
             dicta?</p>
-        <a href="tienda.html" class="button">Conoce nuestra tienda</a>
+        <a href="tienda.php" class="button">Conoce nuestra tienda</a>
 
     </div>
     <div class="contenedor imagen-main">
@@ -48,12 +48,9 @@ require('base/header.php');
         </div>
         <h2>¿Necesitas atención personalizada?</h2>
         <p>No dudes en contactarnos.</p>
-        <a href="contacto.html" class="button">Llena nuestro formulario</a>
+        <a href="contacto.php" class="button">Llena nuestro formulario</a>
 
     </div>
-
-    <script src="./build/js/bundle.min.js"></script>
-</body>
 
 <?php
 
