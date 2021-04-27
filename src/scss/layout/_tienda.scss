@@ -8,7 +8,7 @@
     .descripcion-articulo{
         font-size: 1.2rem;
         font-weight: 300;
-        color: $Claro;
+        color: $Oscuro;
         margin-bottom: 1.5rem;
     }
     .titulo-articulo{
@@ -21,6 +21,10 @@
         &:after{
             border: 1px solid $Oscuro;
         }
+    }
+    .precio-tienda{
+        font-weight: bold;
+        margin-bottom: 1rem;
     }
 
     &:hover{

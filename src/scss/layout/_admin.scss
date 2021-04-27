@@ -73,3 +73,55 @@
     color: white;
     font-weight: bold;
 }
+
+.tabla-articulos{
+
+    .cabecera{
+
+        th{
+            background-color: $Oscuro;
+            color: $Claro;
+            font-size: 2rem;
+            padding: 1rem 2.5rem;
+        }
+    }
+    
+    tr{
+     padding-top: 1rem;   
+    }
+    td{
+        background-color: $Claro;
+        color: $Oscuro;
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem;
+    }
+
+    margin: 0 auto 2rem auto;
+}
+
+.boton{
+    display: block;
+    color: $Oscuro;
+    padding: 1rem;
+    border: none;
+    width: 10rem;
+    text-align: center;
+
+    &:hover{
+        color: $Claro;
+        cursor: pointer;
+    }
+}
+
+.rojo{
+    background-color: red;
+    &:hover{
+        background-color: rgb(139, 0, 0);
+    }
+}
+.amarillo{
+    background-color: $AmarilloFuerte;
+    &:hover{
+        background-color: rgb(172, 172, 5);
+    }
+}

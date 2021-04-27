@@ -17,6 +17,7 @@
                 <div class="contenedor-articulo">
                     <img src="/images/<?php echo $articulo['imagen']; ?>" alt="Imagen del producto">
                     <h4 class="titulo-articulo"><?php echo $articulo['nombre']; ?></h4>
+                    <p class="precio-tienda">$<?php echo $articulo['precio']; ?></p>
                     <p class="descripcion-articulo"><?php echo $articulo['descripcion']; ?></p>
                     <a  class='boton-tienda' href="articulo.php?no=<?php echo $articulo['idproducto'];?>">Ver articulo</a>
                 </div>
