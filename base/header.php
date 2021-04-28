@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="preload" href="articulo.php">
     <title>Persefone</title>
 </head>
 
@@ -24,5 +25,9 @@
             <a class='link' href="/tienda.php">Tienda</a>
             <a class='link' href="/blog.php">Blog</a>
             <a class='link' href="/contacto.php">Contacto</a>
+            <a href="/carrito.php">
+            <img src="/build/img/logo/carro-de-la-compra.svg" alt="Carrito de compras" class="img-carrito">
+            </a>
+            <!-- <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div> -->
         </nav>
     </header>

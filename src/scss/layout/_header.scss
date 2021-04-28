@@ -17,7 +17,7 @@
     @include tablet {
         
         img {
-            width: 30%;
+            width: 30rem;
             height: auto;
         }
         flex-direction: row;
@@ -39,14 +39,14 @@ nav{
     }
 
     .link {
-        font-size: 1.6rem;
-        margin-right: 1rem;
+        font-size: 3rem;
+        margin-right: 2rem;
         color:$Verde;
         margin-top: 1rem;
         text-align: center;
 
         &:hover{
-            font-size: 1.8rem;
+            font-size: 3.2rem;
             color: $Oscuro
         }
     }
@@ -62,4 +62,13 @@ nav{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+
+.img-carrito{
+    max-height: 5rem;
+    padding: 1rem;
+    @include tablet{
+        max-width: 10rem;
+        padding: 0;
+    }
 }

@@ -11,6 +11,7 @@ Este proyecto será una **Tienda Web**, contará con un blog el cual hará recom
 
 ### Fuentes utilizadas:
 Oswald light, Oswald regular, Oswald bold
+fonts.google.com/specimen/Oswald?query=oswald
 
 ### Imagenes y recursos utilizados fueron proporcionados por Pexels:
 https://www.pexels.com/es-es/license/
@@ -21,6 +22,9 @@ https://www.pexels.com/es-es/license/
 * JavaScript
 * Gulp
 * * Sass
+* PHP v8
+* MySQL / MariaDB
+* * A través de MySQL Workbench
 
 ### Contacto
 * Mauricio Basurto Jacobo
