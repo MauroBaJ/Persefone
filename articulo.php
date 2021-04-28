@@ -53,7 +53,7 @@
 <aside class="sidebar">
         <h3>Artículos Relacionados</h3>
         <?php
-            $query = "SELECT * FROM producto WHERE tipo = ${tipo} LIMIT 2";
+            $query = "SELECT * FROM producto WHERE tipo = ${tipo} and idproducto != ${id} LIMIT 2";
             $resultado = mysqli_query($db, $query);
             
             while( $articuloRecomendado = mysqli_fetch_assoc($resultado)):
