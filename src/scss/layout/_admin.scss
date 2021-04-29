@@ -171,3 +171,14 @@
         margin: 1rem auto;
     }
 }
+
+.error{
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}

@@ -1,3 +1,4 @@
+
 </body>
 <script src="./build/js/bundle.min.js"></script>
 
@@ -9,13 +10,10 @@
             <a class='link' href="/tienda.php">Tienda</a>
             <a class='link' href="/blog.php">Blog</a>
             <a class='link' href="/contacto.php">Contacto</a>
-            <a class="link" href="/admin/">Iniciar Sesión</a>
+
         </nav>
     </div>
     <p>Persefone inc. Todos los derechos reservados, 2021</p>
 </footer>
-
-
-
 
 </html>

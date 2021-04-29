@@ -2,6 +2,10 @@
 
 require('base/header.php');
 
+    if ($_GET['send'] == 1) session_destroy();
+
+    var_dump($_SESSION['admin']);
+
 ?>
 
     <main>

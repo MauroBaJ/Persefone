@@ -1,3 +1,9 @@
+<?
+    require('../admin/funciones/auth.php');
+    $auth = authenticate();
+    $adm = isAdmin();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,9 +31,21 @@
             <a class='link' href="/tienda.php">Tienda</a>
             <a class='link' href="/blog.php">Blog</a>
             <a class='link' href="/contacto.php">Contacto</a>
+            <?php if($adm): ?>
+            <a class='link' href="/admin/">Administrar sitio</a>
+            <?php endif; ?>
+            <?php if(!$auth): ?>
+            <a class="link" href="/login.php">Iniciar Sesión</a>
+            <?php
+                endif;
+                if($auth):
+            ?>
+            <a class="link" href="/index.php?send=1">Cerrar Sesión</a>
+            <?php endif; ?>
             <a href="/carrito.php">
             <img src="/build/img/logo/carro-de-la-compra.svg" alt="Carrito de compras" class="img-carrito">
             </a>
             <!-- <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div> -->
         </nav>
     </header>
+    

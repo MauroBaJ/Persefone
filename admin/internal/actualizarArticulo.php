@@ -82,11 +82,13 @@
 <main class="contenedor">
 
     <?php
+    if(!empty($errores)):
         foreach($errores as $error):
     ?>
-    <p><?php echo $error; ?></p>
+    <p class="error"><?php echo $error; ?></p>
     <?php
         endforeach;
+    endif;
     ?>
 
     <form class="formulario-admin" method="POST" enctype="multipart/form-data" action="/admin/internal/actualizarArticulo.php?id=<?php echo $id;?>">

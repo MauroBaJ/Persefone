@@ -71,12 +71,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 <main class="contenedor">
 
-    <?php
-        foreach($errores as $error):
+    <?php 
+        if(!empty($errores)):
+            foreach($errores as $error):
     ?>
-    <p><?php echo $error; ?></p>
-    <?php
-        endforeach;
+        <p class="error"><?php echo $error; ?></p>
+    <?php 
+            endforeach;
+        endif;
     ?>
 
     <form class="formulario-admin" method="POST" enctype="multipart/form-data" action="/admin/internal/crearArticulo.php">
