@@ -16,6 +16,9 @@
         case 2:
             $textoResultado = 'Producto añadido correctamente';
             break;
+        case 4:
+            $textoResultado = 'Entrada creada correctamente';
+            break;
     }
 
 ?>

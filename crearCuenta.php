@@ -1,15 +1,23 @@
 <?php 
     require('base/header.php');
     require('admin/funciones/database.php');
+    require('admin/funciones/auth.php');
     $db = conectarDB();
 
-    $errores= [];  
+    $errores= []; 
+    
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $telefono = $_POST['telefono'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password2 = $_POST['password2'];
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $nombre = mysqli_real_escape_string($db, $_POST['nombre']);
         $apellido = mysqli_real_escape_string($db, $_POST['apellido']);
         $telefono = mysqli_real_escape_string($db, $_POST['telefono']);
-        $email = mysqli_real_escape_string($db, filter_var($_POST['email'], FILTER_VALIDATE_EMAIL));
+        $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
         $password2 = mysqli_real_escape_string($db, $_POST['password2']);
 
@@ -36,20 +44,20 @@
 
         if(empty($errores)){
 
+            
             $query = "INSERT INTO cliente (nombre, apellido, telefono, email, password) VALUES 
             ('${nombre}', '${apellido}', '${telefono}', '${email}', '${password}')";
 
             $resultado = mysqli_query($db, $query);
+            
+            $query = "SELECT * FROM cliente WHERE email = '${email}'";
+
+            $resultado = mysqli_query($db, $query);
             $usuario = mysqli_fetch_assoc($resultado);
             
-            session_start();
-    
-            $_SESSION['usuario'] = $usuario['email'];
-            // $_SESSION['password'] = $usuario['PASSWORD'];
-            $_SESSION['login'] = true;
 
             mysqli_close($db);
-            header('Location: /');
+            iniciarSesion(false, $usuario);
         }
     }
 ?>
@@ -91,7 +99,7 @@
             </div>
             <div class="campo">
                 <label for="password">Ingrese una contraseña</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" >
             </div>
             <div class="campo">
                 <label for="password2">Vuelva a ingresar la contraseña</label>

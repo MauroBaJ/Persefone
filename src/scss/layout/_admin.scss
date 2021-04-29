@@ -160,6 +160,7 @@
     textarea{
         width: 100%;
         min-height: 15rem;
+        font-size: 1.6rem;
         @include tablet{
             min-height: 30rem;
         }

@@ -4,6 +4,7 @@
     $auth = $_SESSION['login'] ?? false;
     $admin = $_SESSION['administrador'] ?? false;
 
+    $correo = $_SESSION['usuario'];
 ?>
 
 <!DOCTYPE html>

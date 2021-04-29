@@ -14,6 +14,8 @@ $inventario = '';
 
 $errores = [];
 
+
+
 //Al enviar el form
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -26,6 +28,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $inventario = mysqli_real_escape_string($db, $_POST['inventario']);
 
     $imagen = $_FILES['imagen'];
+    echo 'hola';
+    var_dump($_FILES);
+    exit;
 
     //Validación de campos
     if(!$categoria) $errores[] = 'Debe seleccionar una categoría';

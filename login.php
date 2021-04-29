@@ -36,7 +36,6 @@
             else if($resultado2->num_rows){
                 $usuario = mysqli_fetch_assoc($resultado2);
                 
-                var_dump($usuario);
 
                 //Verificar password
                 $auth = ($password === $usuario['password']);
