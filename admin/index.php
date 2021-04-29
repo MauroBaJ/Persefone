@@ -1,10 +1,7 @@
 <?php
     require('../base/header.php');
-    require('funciones/auth.php');
-    $auth = authenticate();
-    $adm = isAdmin();
 
-    if(!$adm) header('Location : /');
+    if ($_SESSION['administrador'] == false) header('Location: /');
 
     $resultado = $_GET['resultado'] ?? null;
     $textoResultado = '';
@@ -20,8 +17,6 @@
             $textoResultado = 'Producto añadido correctamente';
             break;
     }
-
-    var_dump($_SESSION);
 
 ?>
 

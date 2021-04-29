@@ -1,6 +1,7 @@
 <?php
     require('base/header.php');
     require('admin/funciones/database.php');
+    require('admin/funciones/auth.php');
 
     $db = conectarDB();
     $errores = [];
@@ -27,19 +28,8 @@
                 $auth = ($usuario['password'] === $password);
                 
                 if($auth){
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }                    
-                    session_start();
-
-                    $_SESSION['usuario'] = $usuario['email'];
-                    // $_SESSION['password'] = $usuario['PASSWORD'];
-                    $_SESSION['login'] = true;
-                    $_SESSION['admin'] = true;
-                    
-
                     mysqli_close($db);
-                    header('Location: /admin/index.php');                
+                    if($auth) iniciarSesion(true, $usuario);                
                 }
                 else $errores[] = 'Password incorrecto';
             }
@@ -52,19 +42,9 @@
                 $auth = ($password === $usuario['password']);
                 
                 if($auth){
-
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }                        
-                    session_start();
-
-                    $_SESSION['usuario'] = $usuario['email'];
-                    // $_SESSION['password'] = $usuario['PASSWORD'];
-                    $_SESSION['login'] = true;
-
                     mysqli_close($db);
-                    header('Location: /');                
-                }
+                    iniciarSesion(false, $usuario);
+                } 
                 else $errores[] = 'Password incorrecto';
              }
             else $errores[] = 'El usuario no existe';

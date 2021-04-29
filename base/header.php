@@ -1,7 +1,9 @@
-<?
-    require('../admin/funciones/auth.php');
-    $auth = authenticate();
-    $adm = isAdmin();
+<?php
+    if(!isset($_SESSION)) session_start();
+
+    $auth = $_SESSION['login'] ?? false;
+    $admin = $_SESSION['administrador'] ?? false;
+
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +33,14 @@
             <a class='link' href="/tienda.php">Tienda</a>
             <a class='link' href="/blog.php">Blog</a>
             <a class='link' href="/contacto.php">Contacto</a>
-            <?php if($adm): ?>
-            <a class='link' href="/admin/">Administrar sitio</a>
-            <?php endif; ?>
             <?php if(!$auth): ?>
-            <a class="link" href="/login.php">Iniciar Sesión</a>
-            <?php
-                endif;
-                if($auth):
-            ?>
-            <a class="link" href="/index.php?send=1">Cerrar Sesión</a>
+                <a class="link" href="login.php">Iniciar Sesión</a>
+            <?php endif; ?>
+            <?php if($auth): ?>
+                <a class="link" href="/admin/funciones/cerrar-sesion.php">Cerrar Sesión</a>
+            <?php endif; ?>
+            <?php if($admin): ?>
+                <a class="link" href="/admin/index.php">Administrar Sitio</a>
             <?php endif; ?>
             <a href="/carrito.php">
             <img src="/build/img/logo/carro-de-la-compra.svg" alt="Carrito de compras" class="img-carrito">

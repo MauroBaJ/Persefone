@@ -1,12 +1,4 @@
-<?php 
-
-require('base/header.php');
-
-    if ($_GET['send'] == 1) session_destroy();
-
-    var_dump($_SESSION['admin']);
-
-?>
+<?php require('base/header.php'); ?>
 
     <main>
         <div class="imagen-main contenedor">
