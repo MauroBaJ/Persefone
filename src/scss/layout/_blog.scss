@@ -61,3 +61,131 @@
     }
 
 }
+
+//Articulo
+
+.articulo-blog{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    img{
+        max-height: 40rem;
+        max-width: min(100%, 100rem  ) ;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    h4{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+
+        span{
+            font-weight: bold;
+        }
+    }
+    p{
+        font-size: 1.6rem;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-bottom: 3rem;
+
+        img{
+            grid-column: 1 / 2;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .blog-articulo{
+            grid-column: 2/3;
+
+            h2{
+                font-size: 3.2rem;
+            }
+            h4{
+                span{
+                    color: #ea785f;
+                }
+            }
+            p{
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.related{
+    display: flex;
+    
+    flex-direction: column;
+    margin: 3rem auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem auto;
+
+    @include tablet{
+        flex-direction: row;
+        width: 70%;
+    }
+}
+
+.related-producto{
+
+    background-color: $Claro;
+    margin-bottom: 2rem;
+    
+    width: 100%;
+
+    @include tablet{
+        width: 30rem;
+        margin-right: 2rem;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+    img{
+        width: 90%;
+        height: auto;
+        margin: 1rem 5%;
+    }
+
+
+}
+.related-info{
+    height: auto;
+    text-align: center;
+    h3{
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    h4{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+.button-related{
+    font-size: 2.4rem;
+    background-color: $Verde;
+    color: white;
+    padding: 1rem;
+    display: block;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #ea785f;
+        font-size: 3rem;
+        transition: 0.7s ease-in-out;
+    }
+}

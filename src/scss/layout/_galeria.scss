@@ -14,7 +14,7 @@
             @include grid(4, 3rem);
         }
         @include desktop{
-            @include grid(6, 4rem);
+            @include grid(5, 4rem);
         }
         
         li{
