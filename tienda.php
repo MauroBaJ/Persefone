@@ -15,10 +15,20 @@
         <?php while($articulo = mysqli_fetch_assoc($resultado)): ?>
             <li>
                 <div class="contenedor-articulo">
-                    <img src="/images/<?php echo $articulo['imagen']; ?>" alt="Imagen del producto">
+                    <img class="imagen-articulo-tienda" src="/images/<?php echo $articulo['imagen']; ?>" alt="Imagen del producto">
                     <h4 class="titulo-articulo"><?php echo $articulo['nombre']; ?></h4>
                     <p class="precio-tienda">$<?php echo $articulo['precio']; ?></p>
-                    <p class="descripcion-articulo"><?php echo $articulo['descripcion']; ?></p>
+                    <p class="descripcion-articulo">
+                    <?php 
+                    $string = $articulo['descripcion'];
+                    if(strlen($string) > 100){
+                        $stringCut = substr($string, 0, 100);
+                        $endPoint = strrpos($stringCut, ' ');
+
+                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                    }
+                    echo $string.'...';
+                ?></p>
                     <a  class='boton-tienda' href="articulo.php?no=<?php echo $articulo['idproducto'];?>">Ver articulo</a>
                 </div>
             </li>

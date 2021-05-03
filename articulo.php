@@ -4,6 +4,7 @@
 
     $db = conectarDB();
     $id = $_GET['no'];
+    $errores = [];
 
     $query = "SELECT * FROM producto WHERE idproducto = ${id}";
     $resultado = mysqli_query($db, $query);
@@ -17,12 +18,50 @@
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $elegido = $id;
         $cantidad = $_POST['inventario'];
-
         
+        //Validar que cantidad no sea vacio
+        if($cantidad === '') $errores[] = 'Debe seleccionar una cantidad';
+        
+        if(empty($errores)){
+            //Elegir id de cliente
+            $query = "SELECT idcliente FROM cliente WHERE email = '${correo}'";
+            $resultado = mysqli_query($db, $query);
+            $idCliente = mysqli_fetch_assoc($resultado);
+            $idCliente = $idCliente['idcliente'];
+
+            $query = "INSERT INTO carrito (idcliente, idproducto, cantidad) 
+            VALUES(${idCliente}, ${elegido}, ${cantidad})";
+            $resultado = mysqli_query($db, $query);
+
+            if($resultado){
+                $correcto = [];
+                $correcto[] = 'Se agrego correctamente al carrito';
+            }
+        }
     }
 ?>
 <div class="articulo-tienda">
 <main class="contenedor">
+
+    <?php 
+        if(!empty($errores)):
+            foreach($errores as $error):
+    ?>
+        <p class="error"><?php echo $error;?></p>
+    <?php 
+            endforeach;
+        endif;
+    ?>
+    <?php 
+        if(!empty($correcto)):
+            foreach($correcto as $correcto):
+    ?>
+        <p class="correcto"><?php echo $correcto;?></p>
+    <?php 
+            endforeach;
+        endif;
+    ?>
+
 
     <div class="articulo-principal">
         <section>
