@@ -40,7 +40,7 @@
         $resultado2 = mysqli_query($db, $query);
         $usuario2 = mysqli_fetch_assoc($resultado);
 
-        if($email = $usuario['email'] || $email = $usuario2['email']) $errores[] = 'Esa direccion de correo ya esta en uso.';
+        if($email == $usuario['email'] || $email == $usuario2['email']) $errores[] = 'Esa direccion de correo ya esta en uso.';
 
         if(empty($errores)){
 

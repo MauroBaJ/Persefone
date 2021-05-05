@@ -1,4 +1,6 @@
-<?php require('base/header.php'); ?>
+<?php require('base/header.php'); 
+
+?>
 
     <main>
         <div class="imagen-main contenedor">

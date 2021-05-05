@@ -33,5 +33,29 @@
             font-size: 1.4rem;
         }
     }
+
+    &.hide-from-view{
+        display: none;
+    }
+
+
+}
+
+.formmsg{
+    margin: -10rem auto 5rem auto;
+    width: 70%;
+    padding: 2rem;
+    border: 1px solid $Oscuro;
+    text-align: center;
+    background-color: $Claro;
+
+    h2{
+        font-size: 3.6rem;
+        font-weight: bold;
+    }
+    p{
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
 }
 

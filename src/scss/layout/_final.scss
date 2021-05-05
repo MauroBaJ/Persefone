@@ -1,0 +1,35 @@
+.confirmacion{
+    margin: 2rem auto;
+    fieldset{
+        legend{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 2.5rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+    }
+    @include desktop{
+        width: 60%;
+    }
+}
+
+.boton-finish{
+    background-color: blue;
+    color: white;
+    font-size: 3rem;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        background-color: darken(blue, 10);
+        font-size: 3.5rem;
+        // transition: 0.5s ease-in-out;
+    }
+}

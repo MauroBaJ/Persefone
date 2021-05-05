@@ -91,13 +91,14 @@ td, th{
 
     display: flex;
     flex-direction: column;
-    width: min(100%, 40rem );
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     margin: 2rem auto;
 
     @include tablet{
         grid-column: 1/2;
+        width: 45rem;
     }
 
     .tarjeta{
@@ -108,6 +109,8 @@ td, th{
         border: 1px solid $Oscuro;
         padding: 1rem;
         background-color: $Claro;
+        width: 100%;
+        height: 12.5rem;
 
         p{
             font-size: 2.5rem;
@@ -134,8 +137,17 @@ td, th{
 
 .formulario-tarjeta{
 
+    border: 1px solid $Oscuro;
+    position: relative;
+    margin-top: 2rem;
+
     legend{
         font-size: 2rem;
+        position: absolute;
+        top: -2.5rem;
+        left: 1.5rem;
+        background-color: #fff;
+        padding: 1rem;
     }
 
     fieldset{
@@ -149,6 +161,7 @@ td, th{
     .campo1{
         display: flex;
         margin-bottom: 1rem;
+        padding: 2rem;
 
         flex-direction: column;
         justify-content: center;

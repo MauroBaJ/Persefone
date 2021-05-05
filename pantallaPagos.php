@@ -22,7 +22,11 @@
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-        if(isset($_POST['idtarjeta'])) header('Location: pantallaEnvios.php?cc='.$_POST['idtarjeta']);
+
+        if(isset($_POST['idtarjeta'])){
+            mysqli_close($db);
+            header('Location: pantallaEnvios.php?cc='.$_POST['idtarjeta']);
+        }
        
        //Si selecciono esa tarjeta
            $numero = mysqli_real_escape_string($db, $_POST['numero']);
@@ -52,6 +56,7 @@
                     $query = "SELECT idtarjeta FROM tarjeta WHERE numero = '${numero}'";
                     $resultado = mysqli_query($db, $query);
                     $idCC = mysqli_fetch_assoc($resultado);
+                    mysqli_close($db);
                     header('Location: pantallaEnvios.php?cc='.$idCC['idtarjeta']);
                 }
            }
